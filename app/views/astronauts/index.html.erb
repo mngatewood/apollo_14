@@ -1,0 +1,16 @@
+<h1>All Astronauts</h1>
+<section>
+  <% @astronauts.each do |a| %>
+    <article>
+      <h2>Name: <%= a.name %></h2>
+      <h5>Age:  <%= a.age %></h5>
+      <h5>Job:  <%= a.job %></h5>
+      <h5>Missions:</h5>
+        <ul>
+          <%= a.missions.each do |m| %>
+            <li><%= m.name %></li>
+          <% end %>
+        </ul>
+    </article>
+  <% end %>
+</section>
